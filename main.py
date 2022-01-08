@@ -44,9 +44,8 @@ def isFunction(a):
     """
 
     try:
-        fnName = a.string
-        return fnName and \
-            fnName[0] == fnName[0].lower() and \
+        return a.string and \
+            a.string[0] == a.string[0].lower() and \
             re.search("^\/wiki", a['href']) != None and \
             re.search("^(\w+)$", a['title'], re.ASCII)
     except KeyError:
